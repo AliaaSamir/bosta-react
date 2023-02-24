@@ -1,6 +1,3 @@
-import axios from 'axios';
-import React, { ReactComponentElement, useState } from 'react';
-import '../App.css';
 
 interface  IShipment {
   
@@ -34,34 +31,17 @@ interface  IShipment {
 
 function ShipmentDetails(props: {shipment: IShipment|undefined, trackNumber: string|undefined}) {
 
-    /* const [strTrackNumber, setTrackNumber] = useState<string>();
-    const [props.shipment, setshipment] = useState<IState["props.shipment"]|undefined>();
- */
     const monthNames = ["January", "February", "March", "April", "May", "June",
       "July", "August", "September", "October", "November", "December"
     ];
     const weekDays = ['Sun', 'Mon', 'Thu', 'Wen', 'Thr', 'Fri', 'Sat'];
   
-/*     const strTrackNumberChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-      setTrackNumber(e.target.value);
-    }
-
-    const loadShipmentDetails = (): void => {
-
-      axios.get('https://tracking.bosta.co/shipments/track/'+ strTrackNumber).then(res => {
-        console.log(res.data)
-        setshipment({...props.shipment, ...res.data});
-      }).catch(e => {
-        console.log(e)
-      })
-    }
- */
     function getDate(timestamp: string, format: string) {
         let date = new Date(timestamp);
-        if (format == 'd/m/Y') {
+        if (format === 'd/m/Y') {
           return date.getDate() + '/' + (date.getMonth()+1) + '/' + date.getFullYear(); 
         }
-        if (format == 'Y month d') {
+        if (format === 'Y month d') {
           return date.getFullYear() + ' ' + monthNames[date.getMonth()] + ' ' + date.getDate(); 
         }
         return ''; 
@@ -73,8 +53,8 @@ function ShipmentDetails(props: {shipment: IShipment|undefined, trackNumber: str
 
     const listTransitEvents = () => {
       if (props.shipment) {
-        return props.shipment.TransitEvents.map((event: IShipment["TransitEvents"][0]) => 
-        <tr>
+        return props.shipment.TransitEvents.map((event: IShipment["TransitEvents"][0], index) => 
+        <tr key={index}>
           <td>{event.hub}</td>
           <td>{getDate(event.timestamp, 'd/m/Y')}</td>
           <td>{getTime(event.timestamp)}</td>
