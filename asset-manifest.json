@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/bosta-react/static/css/main.073c9b0a.css",
-    "main.js": "/bosta-react/static/js/main.e00fab42.js",
+    "main.css": "/bosta-react/static/css/main.e6c13ad2.css",
+    "main.js": "/bosta-react/static/js/main.96190dd7.js",
     "static/js/787.c1112931.chunk.js": "/bosta-react/static/js/787.c1112931.chunk.js",
     "static/media/logo.svg": "/bosta-react/static/media/logo.87d7864ca07c312238c681660c3c909c.svg",
     "index.html": "/bosta-react/index.html",
-    "main.073c9b0a.css.map": "/bosta-react/static/css/main.073c9b0a.css.map",
-    "main.e00fab42.js.map": "/bosta-react/static/js/main.e00fab42.js.map",
+    "main.e6c13ad2.css.map": "/bosta-react/static/css/main.e6c13ad2.css.map",
+    "main.96190dd7.js.map": "/bosta-react/static/js/main.96190dd7.js.map",
     "787.c1112931.chunk.js.map": "/bosta-react/static/js/787.c1112931.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.073c9b0a.css",
-    "static/js/main.e00fab42.js"
+    "static/css/main.e6c13ad2.css",
+    "static/js/main.96190dd7.js"
   ]
 }
